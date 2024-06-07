@@ -22,7 +22,9 @@ Here it is said
 ```
 however the allowed types are "buy" and "sell", and actually validation of the filter should
 check the type value and return 400 error with a definition of the error ("only buy or sell allowed").
-It makes sense since you should not query the database with the wrong filter value.
+It makes sense since you should not query the database with the wrong filter value. It would be 
+waste of CPU and IO resources.
+
 Should be 
 ```js
 response.should.have.status(400);
