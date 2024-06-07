@@ -34,10 +34,12 @@ sequenceDiagram
 ```
 
 gPlatform should add extra field "domain" into the users table. Composite key [ "domain", "email" ] should be set as unique key.
-There should be migration on the database to add domain to current users of gSite.
+Remove unique index applied on email field. There should be migration on the database to add domain to current users of gSite.
+
+Upon user sign-up inject domain into the request and keep the record of the domain into the users table. 
 
 If the gPlatform uses JWT tokens add the domain inside JWT. Match the token with the x-domain header
-upon authorization and use it to limit access to services only for "Site A". 
+upon authorization and use it to limit access to services only for "Site A". Should be a list of services provided by domain.
 
 If the gPlatform uses a random token stored somewhere in memory database (like Redis) should consider extending the token record
 with the domain field and inject it into the http request upon authentication.
