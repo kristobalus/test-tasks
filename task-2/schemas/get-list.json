@@ -1,0 +1,38 @@
+{
+  "$id": "get-list",
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "List operation",
+  "description": "A schema for a list operation",
+  "type": "object",
+  "properties": {
+    "id": {
+      "type": "integer"
+    },
+    "type": {
+      "type": "string"
+    },
+    "user_id": {
+      "type": "string"
+    },
+    "symbol": {
+      "type": "string"
+    },
+    "shares": {
+      "type": "string"
+    },
+    "price": {
+      "type": "string"
+    },
+    "timestamp": {
+      "type": "string"
+    },
+    "page": {
+      "type": "string"
+    },
+    "pageSize": {
+      "type": "string"
+    }
+  },
+  "additionalProperties": false,
+  "required": []
+}

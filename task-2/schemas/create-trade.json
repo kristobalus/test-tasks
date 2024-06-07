@@ -1,0 +1,39 @@
+{
+  "$id": "create-trade",
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Create operation",
+  "description": "A schema for a create operation",
+  "type": "object",
+  "properties": {
+    "type": {
+      "description": "The trade type, either 'buy' or 'sell'. (String)",
+      "type": "string",
+      "enum": ["buy", "sell"]
+    },
+    "user_id": {
+      "description": "The unique user ID. (Integer)",
+      "type": "integer"
+    },
+    "symbol": {
+      "description": "The stock symbol. (String)",
+      "type": "string"
+    },
+    "shares": {
+      "description": "The total number of shares traded. The traded shares value is between 1 and 100 shares, inclusive. (Integer)",
+      "type": "integer",
+      "minimum": 1,
+      "maximum": 100
+    },
+    "price": {
+      "description": "The price of one share of stock at the time of the trade. (Integer)",
+      "type": "integer"
+    },
+    "timestamp": {
+      "description": "The epoch time of the stock trade in milliseconds. (Integer)",
+      "type": "integer",
+      "minimum": 0
+    }
+  },
+  "additionalProperties": false,
+  "required": ["type", "user_id", "symbol", "shares", "price", "timestamp"]
+}
