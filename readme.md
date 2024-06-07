@@ -1,7 +1,6 @@
 ATTENTION, PLEASE!!
 
-I want to mention several issues that I found in *task-2* and that you should fix
-before passing test to next candidate. 
+I want to mention several issues that I found in *task-2*. 
 
 1. First of all in description of task-2 it is said "provided unit test". 
 ```text
